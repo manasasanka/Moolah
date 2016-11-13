@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/header.ejs %>
+
+<head>
+<link href="css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="page-top">
+
+  <% include ../partials/nav.ejs %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1>Moolah</h1>
+  </div>
+  <br>
+  <form id ="inpForm">
+    Please enter your account ID to get additional details about your financials and budgetary recommendations.
+    <div class="form-inline">
+      <div class="form-group">
+        <label class="sr-only" for="accountid">Enter Account ID</label>
+        <input class="form-control" id="accountid" placeholder="Enter Account ID">
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
+    </div>
+
+
+  </form>
+
+  <div class = "form-inline">
+    <h3>Enter your monthly budget for the following areas of expenditure: </h3>
+    <input class="form-control budgetInp" id="fooddrinks" placeholder="Food and Drinks (500)">
+    <input class="form-control budgetInp" id="transportation" placeholder="Transportation">
+    <input class="form-control budgetInp" id="shopping" placeholder="Shopping">
+    <input class="form-control budgetInp" id="entertainment" placeholder="Entertainment">
+    <input class="form-control budgetInp" id="other" placeholder="Other"></div>
+</div>
+
+<div class = "container text-center">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categoryModal" data-type="Food and Drinks"><img src="../../img/food.png" class="icon_cat"></button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categoryModal" data-type="Transportation"><img src="../../img/transportation.png" class="icon_cat"></button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categoryModal" data-type="Shopping"><img src="../../img/shopping.png" class="icon_cat"></button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categoryModal" data-type="Entertainment"><img src="../../img/ent.png" class="icon_cat"></button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categoryModal" data-type="Other"><img src="../../img/other.png" class="icon_cat"></button>
+  <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="categoryModalLabel">Category: </h4>
+        </div>
+        <div class="modal-body">
+
+          <!--The budget bar should be insterted here, see JS -->
+          <div id = "budgetBar"></div>
+          <div id = "modalrecs" class="recommendations"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="graph-viz">
+  <div class="container">
+    <div id="piechar">
+      </div>
+    <div id="stackbar">
+    </div>
+  </div>
+</div>
+
+  <!--include JQuery library-->
+  <script type = "text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src = "js/new-age.js"></script>
+  <script type="application/javascript"></script>
+
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+</body>
+</html>
