@@ -1,39 +1,4 @@
-# node-js-getting-started
-
-A barebones Node.js app using [Express 4](http://expressjs.com/).
-
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
-
-## Running Locally
-
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
-
-```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+Built for the Intuit challenge, this web app allows college students to manage their money and budget according to their previous history and general trends.
+Some primary features of this app are a categorical analysis of expenditures and a comparison of these expenditures to the user's projections. Reading in past history, the app shows progress on the budget and highlights those categories which need improvement or immediate attention in a glaring red border. 
+Apart from giving the plan with regards to category, this app also calculates the general trends and averages of all the user data on spending in the various categories, which are consolidated into shopping, food, entertainment, transportation, and other. Then, it visualizes a comparison of the user's spending patterns with these calculated averages. Overall, this web app also features a visualization of the user's spending by category in the given time period.
+Additionally, Moolah gives recommendations for future purchases in categories which require suggestions. Scraped from the FourSquare API, the app takes the user's current location and recommends where to potentially explore for a cheaper option to save money in all the consolidated categories. 
